@@ -385,9 +385,8 @@
         .nav-link:hover::after { opacity: 1; right: -25px; }
 
         .uni-text { font-size: 1.6rem; line-height: 1.1; color: var(--purple); text-transform: uppercase; display: inline-block; cursor: pointer; position: relative; }
-        .startup-text { font-size: 1.6rem; color: var(--green); text-align: right; line-height: 1.1; display: flex; align-items: center; gap: 10px; cursor: pointer; position: relative; }
-        .star-spin { display: inline-block; font-size: 2rem; color: var(--black); animation: spin 4s linear infinite; }
-        
+        .header-cta-btn { background-color: var(--yellow); color: var(--black); font-size: 1.1rem; padding: 0.7rem 1.6rem; border: 3px solid var(--black); border-radius: 50px; text-transform: uppercase; box-shadow: 4px 4px 0px var(--black); transition: all 0.15s ease; text-decoration: none; cursor: pointer; white-space: nowrap; }
+        @media (hover: hover) { .header-cta-btn:hover { animation: wiggle 0.4s ease-in-out infinite; transform: translate(2px, 2px); box-shadow: 2px 2px 0px var(--black); background-color: var(--white); } }
         /* Glitch Animation */
         .glitch-hover:hover {
             animation: textGlitch 0.25s cubic-bezier(.25, .46, .45, .94) both infinite;
@@ -456,8 +455,6 @@
             border-bottom-color: var(--black);
         }
         
-        body.biohazard .star-spin { color: #e0e0e0; }
-
         body.biohazard .bento-box:not(.accent-green):not(.accent-purple):not(.accent-blue),
         body.biohazard .speaker-card,
         body.biohazard .speaker-info,
@@ -1019,8 +1016,7 @@
             #cursorDot { display: none !important; }
             header { flex-direction: column; align-items: center; text-align: center; gap: 0.8rem; padding: 1.5rem 5%; }
             .uni-text { font-size: 1.3rem; }
-            .startup-text { text-align: center; justify-content: center; font-size: 1.3rem; }
-            
+
             .hazard-toggle { top: auto; bottom: 80px; right: 20px; width: 48px; height: 48px; font-size: 1.4rem; z-index: 1000; position: fixed; }
             #crtToggle { top: auto !important; bottom: 140px !important; right: 20px !important; }
             
@@ -1189,8 +1185,6 @@
             color: #e0e0e0;
         }
         body.cyber-red header { background-color: rgba(18, 18, 18, 0.85); border-bottom-color: var(--black); }
-        body.cyber-red .star-spin { color: #e0e0e0; }
-
         body.cyber-red .bento-box:not(.accent-green):not(.accent-purple):not(.accent-blue),
         body.cyber-red .speaker-card,
         body.cyber-red .speaker-info,
@@ -1433,7 +1427,7 @@
                 padding: 1rem 5% !important;
             }
             .header-nav { display: none !important; }
-            .startup-text { display: none !important; }
+            .header-cta-btn { display: none !important; }
             .burger-btn { display: flex !important; }
 
             /* Hero Section */
@@ -1518,7 +1512,7 @@
             <a class="nav-link hover-trigger" onclick="document.querySelector('.speaker-section').scrollIntoView({behavior: 'smooth'})">SPEAKERS</a>
             <a class="nav-link hover-trigger" href="team.html">TEAM</a>
         </nav>
-        <div class="startup-text glitch-hover">Startup Greece Week <span class="star-spin">✷</span></div>
+        <a class="header-cta-btn hover-trigger" onclick="document.querySelector('.registration-wrapper').scrollIntoView({behavior: 'smooth'})">Free Tickets 🎟️</a>
     </header>
     
     <button class="burger-btn hover-trigger" id="burgerBtn" aria-label="Toggle Menu">
@@ -1530,6 +1524,7 @@
         <a class="nav-link hover-trigger mobile-link" onclick="toggleMobileMenu(); document.querySelector('.schedule-section').scrollIntoView({behavior: 'smooth'})">TIMELINE</a>
         <a class="nav-link hover-trigger mobile-link" onclick="toggleMobileMenu(); document.querySelector('.speaker-section').scrollIntoView({behavior: 'smooth'})">SPEAKERS</a>
         <a class="nav-link hover-trigger mobile-link" href="team.html">TEAM</a>
+        <a class="nav-link hover-trigger mobile-link" onclick="toggleMobileMenu(); document.querySelector('.registration-wrapper').scrollIntoView({behavior: 'smooth'})">Free Tickets</a>
     </div>
     
     <button class="hazard-toggle hover-trigger" id="hazardToggle" aria-label="Toggle Theme">🌙</button>
