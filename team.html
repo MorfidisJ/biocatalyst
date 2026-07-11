@@ -385,9 +385,8 @@
         .nav-link:hover::after { opacity: 1; right: -25px; }
 
         .uni-text { font-size: 1.6rem; line-height: 1.1; color: var(--purple); text-transform: uppercase; display: inline-block; cursor: pointer; position: relative; }
-        .startup-text { font-size: 1.6rem; color: var(--green); text-align: right; line-height: 1.1; display: flex; align-items: center; gap: 10px; cursor: pointer; position: relative; }
-        .star-spin { display: inline-block; font-size: 2rem; color: var(--black); animation: spin 4s linear infinite; }
-        
+        .header-cta-btn { background-color: var(--yellow); color: var(--black); font-size: 1.1rem; padding: 0.7rem 1.6rem; border: 3px solid var(--black); border-radius: 50px; text-transform: uppercase; box-shadow: 4px 4px 0px var(--black); transition: all 0.15s ease; text-decoration: none; cursor: pointer; white-space: nowrap; }
+        @media (hover: hover) { .header-cta-btn:hover { animation: wiggle 0.4s ease-in-out infinite; transform: translate(2px, 2px); box-shadow: 2px 2px 0px var(--black); background-color: var(--white); } }
         /* Glitch Animation */
         .glitch-hover:hover {
             animation: textGlitch 0.25s cubic-bezier(.25, .46, .45, .94) both infinite;
@@ -456,8 +455,6 @@
             border-bottom-color: var(--black);
         }
         
-        body.biohazard .star-spin { color: #e0e0e0; }
-
         body.biohazard .bento-box:not(.accent-green):not(.accent-purple):not(.accent-blue),
         body.biohazard .speaker-card,
         body.biohazard .speaker-info,
@@ -1019,8 +1016,7 @@
             #cursorDot { display: none !important; }
             header { flex-direction: column; align-items: center; text-align: center; gap: 0.8rem; padding: 1.5rem 5%; }
             .uni-text { font-size: 1.3rem; }
-            .startup-text { text-align: center; justify-content: center; font-size: 1.3rem; }
-            
+
             .hazard-toggle { top: auto; bottom: 80px; right: 20px; width: 48px; height: 48px; font-size: 1.4rem; z-index: 1000; position: fixed; }
             #crtToggle { top: auto !important; bottom: 140px !important; right: 20px !important; }
             
@@ -1189,7 +1185,6 @@
             color: #e0e0e0;
         }
         body.cyber-red header { background-color: rgba(18, 18, 18, 0.85); border-bottom-color: var(--black); }
-        body.cyber-red .star-spin { color: #e0e0e0; }
 
         body.cyber-red .bento-box:not(.accent-green):not(.accent-purple):not(.accent-blue),
         body.cyber-red .speaker-card,
@@ -1433,7 +1428,7 @@
                 padding: 1rem 5% !important;
             }
             .header-nav { display: none !important; }
-            .startup-text { display: none !important; }
+            .header-cta-btn { display: none !important; }
             .burger-btn { display: flex !important; }
 
             /* Hero Section */
@@ -1513,12 +1508,10 @@
     <header class="hover-trigger">
         <div class="uni-text glitch-hover" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">University<br>of Ioannina</div>
         <nav class="header-nav">
-            <a class="nav-link hover-trigger" onclick="document.querySelector('.bento-section').scrollIntoView({behavior: 'smooth'})">ABOUT</a>
-            <a class="nav-link hover-trigger" onclick="document.querySelector('.schedule-section').scrollIntoView({behavior: 'smooth'})">TIMELINE</a>
-            <a class="nav-link hover-trigger" onclick="document.querySelector('.speaker-section').scrollIntoView({behavior: 'smooth'})">SPEAKERS</a>
+            <a class="nav-link hover-trigger" href="Biocatalyst.html">Homepage</a>
             <a class="nav-link hover-trigger" href="team.html">TEAM</a>
         </nav>
-        <div class="startup-text glitch-hover">Startup Greece Week <span class="star-spin">✷</span></div>
+        <a class="header-cta-btn hover-trigger" href="Biocatalyst.html#registrationWrapper">Free Tickets 🎟️</a>
     </header>
     
     <button class="burger-btn hover-trigger" id="burgerBtn" aria-label="Toggle Menu">
@@ -1526,25 +1519,23 @@
     </button>
     
     <div class="mobile-nav-overlay" id="mobileNav">
-        <a class="nav-link hover-trigger mobile-link" onclick="toggleMobileMenu(); document.querySelector('.bento-section').scrollIntoView({behavior: 'smooth'})">ABOUT</a>
-        <a class="nav-link hover-trigger mobile-link" onclick="toggleMobileMenu(); document.querySelector('.schedule-section').scrollIntoView({behavior: 'smooth'})">TIMELINE</a>
-        <a class="nav-link hover-trigger mobile-link" onclick="toggleMobileMenu(); document.querySelector('.speaker-section').scrollIntoView({behavior: 'smooth'})">SPEAKERS</a>
+        <a class="nav-link hover-trigger" href="Biocatalyst.html">Homepage</a>
         <a class="nav-link hover-trigger mobile-link" href="team.html">TEAM</a>
+        <a class="nav-link hover-trigger mobile-link" href="Biocatalyst.html#registrationWrapper">Free Tickets</a>
     </div>
     
     <button class="hazard-toggle hover-trigger" id="hazardToggle" aria-label="Toggle Theme">🌙</button>
     <button class="hazard-toggle hover-trigger" id="crtToggle" style="display: none; top: 195px; background: var(--black); color: var(--pink); box-shadow: 4px 4px 0px var(--green);" aria-label="Toggle CRT Mode">📺</button>
 
     
-    <!-- TEAM SECTION injected -->
+    <!-- TEAM SECTION  -->
     <style>
-        /* Hide all original Biocatalyst main content sections on this page */
         .hero, .marquee-container, .section-header-wrapper, .bento-section, 
         .schedule-section, .speaker-section, .registration-wrapper {
             display: none !important;
         }
 
-        /* Brutalist Team Bento Grid Styling */
+        /* Clean Team Grid Styling */
         .team-container {
             padding: 4rem 5%;
             max-width: 1200px;
@@ -1552,258 +1543,250 @@
             min-height: 80vh;
         }
         .team-header-main {
-            font-size: clamp(3rem, 8vw, 5rem);
-            text-transform: uppercase;
-            border-bottom: 8px solid var(--black);
-            padding-bottom: 1rem;
+            font-size: clamp(2.2rem, 5vw, 3rem);
+            text-transform: none;
+            text-align: center;
             margin-bottom: 3rem;
-            color: var(--pink);
-            text-shadow: 4px 4px 0px var(--black);
+            color: var(--black);
+            text-shadow: none;
             line-height: 1.1;
         }
-        
-        .bento-team-grid {
+
+        .team-grid-clean {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(4, 1fr);
             gap: 2rem;
-            grid-auto-flow: dense;
         }
 
-        @media (min-width: 900px) {
-            .bento-team-grid {
-                grid-template-columns: repeat(2, 1fr);
-                grid-auto-flow: dense;
-            }
-            .bento-member-card.size-half { grid-column: span 1; }
-            .bento-member-card.size-full { grid-column: span 2; }
+        @media (max-width: 1024px) {
+            .team-grid-clean { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 560px) {
+            .team-grid-clean { grid-template-columns: 1fr; }
         }
 
-        .bento-member-card {
+        .team-card-clean {
             border: 4px solid var(--black);
-            border-radius: 24px;
+            border-radius: 40px;
             background-color: var(--white);
-            box-shadow: 10px 10px 0px var(--black);
+            box-shadow: 8px 8px 0px var(--black);
             display: flex;
             flex-direction: column;
-            overflow: hidden;
-            transition: all 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
-            position: relative;
+            align-items: center;
+            text-align: center;
+            padding: 2.5rem 1.5rem;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
-        .bento-member-card:hover {
+        .team-card-clean:hover {
             transform: translate(-4px, -4px) rotate(-1deg);
-            box-shadow: 14px 14px 0px var(--black);
-            z-index: 10;
+            box-shadow: 12px 12px 0px var(--black);
         }
-        .bento-member-card.accent-blue { background-color: var(--blue); }
-        .bento-member-card.accent-pink { background-color: var(--pink); }
-        .bento-member-card.accent-green { background-color: var(--green); }
-        .bento-member-card.accent-yellow { background-color: var(--yellow); }
 
-        .member-img-space {
-            height: 220px;
-            border-bottom: 4px solid var(--black);
-            background-color: rgba(255, 255, 255, 0.5);
-            background-image: radial-gradient(var(--black) 1px, transparent 1px);
-            background-size: 15px 15px;
+        .team-avatar-clean {
+            width: 96px;
+            height: 96px;
+            border-radius: 50%;
+            border: 4px solid var(--black);
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.2rem;
-            color: var(--black);
-            text-transform: uppercase;
+            font-size: 1.6rem;
             font-weight: 900;
-            position: relative;
-            flex-shrink: 0;
-            overflow: hidden;
-            transition: all 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
-        }
-        
-        .member-img-space img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            position: absolute;
-            top: 0;
-            left: 0;
-            display: none; /* Hide until image is available */
-        }
-
-        @media (min-width: 900px) {
-            .bento-member-card.size-half .member-img-space {
-                height: 200px;
-            }
-            .bento-member-card.size-full .member-img-space {
-                height: 280px;
-            }
-        }
-
-        .member-info {
-            padding: 1.5rem;
-            display: flex;
-            flex-direction: column;
-            flex-grow: 1;
-            transition: all 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
-        }
-        .member-role {
-            align-self: flex-start;
-            background: var(--black);
             color: var(--white);
-            padding: 6px 16px;
-            border-radius: 50px;
-            font-size: 0.85rem;
-            margin-bottom: 1.5rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-family: 'Courier New', Courier, monospace;
-            font-weight: bold;
+            margin-bottom: 1.4rem;
+            flex-shrink: 0;
         }
-        .bento-member-card.accent-blue .member-role { color: var(--blue); }
-        .bento-member-card.accent-pink .member-role { color: var(--pink); }
-        .bento-member-card.accent-green .member-role { color: var(--green); }
-        .bento-member-card.accent-yellow .member-role { color: var(--yellow); }
+        .team-avatar-clean.accent-blue { background-color: var(--blue); }
+        .team-avatar-clean.accent-pink { background-color: var(--pink); }
+        .team-avatar-clean.accent-green { background-color: var(--green); }
+        .team-avatar-clean.accent-yellow { background-color: var(--yellow); color: var(--black); }
 
-        .member-name {
-            font-size: 2.2rem;
-            margin-bottom: 1rem;
-            text-transform: uppercase;
-            line-height: 0.95;
+        .team-name-clean {
+            font-size: 1.2rem;
             font-weight: 900;
+            text-transform: none;
+            color: var(--black);
+            margin-bottom: 0.4rem;
         }
-        .member-bio {
+        .team-role-clean {
             font-family: 'Arial', sans-serif;
             font-weight: bold;
-            font-size: 1.1rem;
-            line-height: 1.5;
+            font-size: 0.95rem;
+            color: var(--purple);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
             margin-bottom: 1.5rem;
         }
-        .social-links {
+        .team-social-clean {
             margin-top: auto;
             display: flex;
-            gap: 0.8rem;
-            flex-wrap: wrap;
+            gap: 0.9rem;
         }
-        .social-btn {
-            background: var(--white);
-            color: var(--black);
-            text-decoration: none;
-            padding: 0.5rem 1rem;
-            font-weight: bold;
-            font-family: 'Courier New', Courier, monospace;
-            text-transform: uppercase;
-            border: 3px solid var(--black);
-            border-radius: 8px;
-            transition: all 0.2s;
+        .team-social-clean a {
+            color: var(--blue);
+            display: flex;
             cursor: none !important;
-            box-shadow: 2px 2px 0px var(--black);
-            font-size: 0.9rem;
+            transition: opacity 0.2s;
         }
-        .social-btn:hover {
-            transform: translate(2px, 2px);
-            box-shadow: 0px 0px 0px var(--black);
-            background: var(--black);
-            color: var(--white);
-        }
+        .team-social-clean a:hover { opacity: 0.65; }
+        .team-social-clean svg { width: 18px; height: 18px; fill: currentColor; }
 
-        body.cyber-red .bento-member-card { background: #1e1e1e; border-color: #050505; color: #e0e0e0; }
+        body.cyber-red .team-card-clean { background: #1e1e1e; border-color: #050505; color: #e0e0e0; }
         body.cyber-red .team-header-main { color: #fb7185; }
-        body.cyber-red .member-img-space { background-color: #111; background-image: radial-gradient(#e0e0e0 1px, transparent 1px); color: #e0e0e0; }
-        body.cyber-red .social-btn { background: #111; color: #e0e0e0; border-color: #050505; box-shadow: 2px 2px 0px #050505; }
-        body.cyber-red .social-btn:hover { background: #fb7185; color: #111; }
+        body.cyber-red .team-name-clean { color: #e0e0e0; }
+        body.biohazard .team-card-clean { background: #1e1e1e; border-color: #050505; color: #e0e0e0; }
+        body.biohazard .team-header-main { color: #e0e0e0; }
+        body.biohazard .team-name-clean { color: #e0e0e0; }
+
+        /* Supported By Logo Wall */
+        .supported-container {
+            padding: 4rem 5% 0 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .supported-header {
+            font-size: clamp(1.6rem, 4vw, 2.2rem);
+            text-transform: none;
+            text-align: center;
+            margin-bottom: 2.5rem;
+            color: var(--black);
+        }
+        .supported-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 2.5rem 2rem;
+            align-items: center;
+            justify-items: center;
+        }
+        .supported-logo {
+            font-weight: 900;
+            font-size: 1.3rem;
+            color: #999;
+            text-transform: none;
+            letter-spacing: 0.5px;
+            filter: grayscale(1);
+            transition: color 0.2s ease, transform 0.2s ease;
+            white-space: nowrap;
+        }
+        .supported-logo:hover {
+            color: var(--purple);
+            transform: scale(1.05);
+        }
+        .supported-logo.font-serif { font-family: 'Times New Roman', Times, serif; font-weight: 700; }
+        .supported-logo.font-script { font-family: 'Segoe Script', cursive; font-weight: 700; }
+        .supported-logo small { display: block; font-size: 0.65rem; font-weight: bold; letter-spacing: 1px; }
+
+        body.cyber-red .supported-header { color: #fb7185; }
+        body.biohazard .supported-header { color: #e0e0e0; }
+        body.cyber-red .supported-logo, body.biohazard .supported-logo { color: #777; }
+        body.cyber-red .supported-logo:hover, body.biohazard .supported-logo:hover { color: #fb7185; }
+
+        @media (max-width: 560px) {
+            .supported-grid { grid-template-columns: repeat(2, 1fr); }
+        }
     </style>
 
+
     <div class="team-container">
-        <h1 class="team-header-main hover-trigger">The Bio-Architects</h1>
-        <div class="bento-team-grid" id="bentoTeamGrid">
-            
-            <div class="bento-member-card accent-blue size-half hover-trigger">
-                <div class="member-img-space">
-                    [ Image Space ]
-                </div>
-                <div class="member-info">
-                    <div class="member-role">Lead Organizer</div>
-                    <h2 class="member-name jelly-text">Elena Kostaki</h2>
-                    <p class="member-bio">Bridging the gap between the wet-lab and full-stack development. Elena founded the BioCatalyst initiative to accelerate deep-tech startups and disrupt traditional R&D pathways.</p>
-                    <div class="social-links">
-                        <a href="#" class="social-btn hover-trigger">LinkedIn</a>
-                        <a href="#" class="social-btn hover-trigger">GitHub</a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="bento-member-card accent-pink size-half hover-trigger">
-                <div class="member-img-space" style="height: 180px;">
-                    [ Image Space ]
-                </div>
-                <div class="member-info">
-                    <div class="member-role">Technical Director</div>
-                    <h2 class="member-name jelly-text">Alexiou Panos</h2>
-                    <p class="member-bio">Architect behind the event's infrastructure and the arcade-embedded web experiences. Fanatic about brutalist design, WebGL physics, and high-performance Rust backends.</p>
-                    <div class="social-links">
-                        <a href="#" class="social-btn hover-trigger">Twitter</a>
-                        <a href="#" class="social-btn hover-trigger">Portfolio</a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="bento-member-card accent-green size-full hover-trigger">
-                <div class="member-img-space">
-                    [ Image Space ]
-                </div>
-                <div class="member-info">
-                    <div class="member-role">Community & PR</div>
-                    <h2 class="member-name jelly-text">Maria Vlachos</h2>
-                    <p class="member-bio">Expert in herding cats and organizing developers. Maria ensures that our sponsors, mentors, and hackers stay well-fed, hydrated, and funded throughout the 48-hour sprint.</p>
-                    <div class="social-links">
-                        <a href="#" class="social-btn hover-trigger">LinkedIn</a>
-                    </div>
+        <h1 class="team-header-main hover-trigger">Our Team</h1>
+        <div class="team-grid-clean">
+
+            <div class="team-card-clean hover-trigger">
+                <div class="team-avatar-clean accent-blue">EK</div>
+                <h2 class="team-name-clean">Elena Kostaki</h2>
+                <p class="team-role-clean">Lead Organizer</p>
+                <div class="team-social-clean">
+                    <a href="#" class="hover-trigger" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
                 </div>
             </div>
 
-            <div class="bento-member-card accent-yellow size-full hover-trigger">
-                <div class="member-img-space">
-                    [ Image Space ]
-                </div>
-                <div class="member-info">
-                    <div class="member-role">Bio-Informatics Lead</div>
-                    <h2 class="member-name jelly-text">Dr. Kostas Aris</h2>
-                    <p class="member-bio">Provides the core scientific guidance and dataset curation for the hackathon. Kostas spends his days sequencing genomes and his nights optimizing machine learning pipelines.</p>
-                    <div class="social-links">
-                        <a href="#" class="social-btn hover-trigger">ResearchGate</a>
-                        <a href="#" class="social-btn hover-trigger">GitHub</a>
-                    </div>
+            <div class="team-card-clean hover-trigger">
+                <div class="team-avatar-clean accent-pink">AP</div>
+                <h2 class="team-name-clean">Alexiou Panos</h2>
+                <p class="team-role-clean">Technical Director</p>
+                <div class="team-social-clean">
+                    <a href="#" class="hover-trigger" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
                 </div>
             </div>
-            
+
+            <div class="team-card-clean hover-trigger">
+                <div class="team-avatar-clean accent-green">MV</div>
+                <h2 class="team-name-clean">Maria Vlachos</h2>
+                <p class="team-role-clean">Community & PR</p>
+                <div class="team-social-clean">
+                    <a href="#" class="hover-trigger" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+                </div>
+            </div>
+
+            <div class="team-card-clean hover-trigger">
+                <div class="team-avatar-clean accent-yellow">KA</div>
+                <h2 class="team-name-clean">Dr. Kostas Aris</h2>
+                <p class="team-role-clean">Bio-Informatics Lead</p>
+                <div class="team-social-clean">
+                    <a href="#" class="hover-trigger" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+                </div>
+            </div>
+
+            <div class="team-card-clean hover-trigger">
+                <div class="team-avatar-clean accent-yellow">KA</div>
+                <h2 class="team-name-clean">Dr. Kostas Aris</h2>
+                <p class="team-role-clean">Bio-Informatics Lead</p>
+                <div class="team-social-clean">
+                    <a href="#" class="hover-trigger" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+                </div>
+            </div>
+
+            <div class="team-card-clean hover-trigger">
+                <div class="team-avatar-clean accent-yellow">KA</div>
+                <h2 class="team-name-clean">Dr. Kostas Aris</h2>
+                <p class="team-role-clean">Bio-Informatics Lead</p>
+                <div class="team-social-clean">
+                    <a href="#" class="hover-trigger" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+                </div>
+            </div>
+
+            <div class="team-card-clean hover-trigger">
+                <div class="team-avatar-clean accent-yellow">KA</div>
+                <h2 class="team-name-clean">Dr. Kostas Aris</h2>
+                <p class="team-role-clean">Bio-Informatics Lead</p>
+                <div class="team-social-clean">
+                    <a href="#" class="hover-trigger" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+                </div>
+            </div>
+
+            <div class="team-card-clean hover-trigger">
+                <div class="team-avatar-clean accent-yellow">KA</div>
+                <h2 class="team-name-clean">Dr. Kostas Aris</h2>
+                <p class="team-role-clean">Bio-Informatics Lead</p>
+                <div class="team-social-clean">
+                    <a href="#" class="hover-trigger" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+                </div>
+            </div>
+
         </div>
     </div>
-    
-    <script>
-        // "Ever changing" bento grid layout logic
-        // Periodically shuffles sizes. Using dense auto-flow ensures perfectly packed rectangles
-        // while allowing the structural layout to jump around dynamically.
-        document.addEventListener('DOMContentLoaded', () => {
-            const grid = document.getElementById('bentoTeamGrid');
-            if(grid) {
-                const cards = Array.from(grid.querySelectorAll('.bento-member-card'));
-                const sizes = ['size-half', 'size-half', 'size-full', 'size-full'];
-                
-                setInterval(() => {
-                    if (window.innerWidth >= 900) {
-                        // Shuffle the sizes array
-                        const shuffledSizes = [...sizes].sort(() => 0.5 - Math.random());
-                        
-                        cards.forEach((card, index) => {
-                            // Remove existing size classes
-                            card.classList.remove('size-half', 'size-full');
-                            // Add new random size
-                            card.classList.add(shuffledSizes[index]);
-                        });
-                    }
-                }, 6000); // changes every 6 seconds
-            }
-        });
-    </script>
     <!-- END TEAM SECTION -->
+
+    <div class="supported-container">
+        <h2 class="supported-header hover-trigger">Supported By</h2>
+        <div class="supported-grid">
+            <span class="supported-logo hover-trigger">Google</span>
+            <span class="supported-logo hover-trigger">Rakuten Viber</span>
+            <span class="supported-logo hover-trigger">sanofi</span>
+            <span class="supported-logo hover-trigger">Allianz (II)</span>
+            <span class="supported-logo hover-trigger">△ EUROBANK</span>
+            <span class="supported-logo hover-trigger">COSMOTE Ŧ</span>
+            <span class="supported-logo hover-trigger font-serif">KAFEATERRA</span>
+            <span class="supported-logo hover-trigger">⛰ ΘΕΟΝΗ</span>
+            <span class="supported-logo hover-trigger font-serif">KPMG</span>
+            <span class="supported-logo hover-trigger">3Ε</span>
+            <span class="supported-logo hover-trigger">ΕΘΝΙΚΗ<br><small>ΤΡΑΠΕΖΑ</small></span>
+            <span class="supported-logo hover-trigger">◆ LAMDA</span>
+            <span class="supported-logo hover-trigger">vodafone</span>
+            <span class="supported-logo hover-trigger font-serif">Piraeus</span>
+        </div>
+    </div>
+
 <section class="hero">
 
         <div class="hero-left">
