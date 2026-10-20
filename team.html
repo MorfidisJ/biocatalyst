@@ -204,7 +204,7 @@
     </script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" defer></script>
-    <link rel="stylesheet" href="css/style.css?v=7">
+    <link rel="stylesheet" href="css/style.css?v=8">
 </head>
 <body>
 
@@ -422,7 +422,7 @@
         </div>
     </div>
 
-    <script src="js/main.js" defer></script>
+    <script src="js/main.js?v=11" defer></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const teamMembersData = {
@@ -596,6 +596,22 @@
                     closeModal();
                 }
             });
+
+            // Mobile Navigation Helper for Team Page
+            const mobileNav = document.getElementById('mobileNav');
+            if (mobileNav) {
+                mobileNav.querySelectorAll('.mobile-link').forEach(link => {
+                    link.addEventListener('click', () => {
+                        if (typeof window.closeMobileMenu === 'function') {
+                            window.closeMobileMenu();
+                        } else {
+                            const bBtn = document.getElementById('burgerBtn');
+                            if (bBtn) bBtn.classList.remove('open');
+                            mobileNav.classList.remove('open');
+                        }
+                    });
+                });
+            }
         });
     </script>
 </body>

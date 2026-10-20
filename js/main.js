@@ -852,7 +852,7 @@
         let lastTime = 0;
         
         const nCanvas = document.getElementById('arcadeNextCanvas');
-        const nCtx = nCanvas.getContext('2d');
+        const nCtx = nCanvas ? nCanvas.getContext('2d') : null;
 
         function createPiece(type) {
             return {
@@ -1016,6 +1016,7 @@
         }
 
         function drawNextPiece() {
+            if (!nCtx || !nCanvas) return;
             nCtx.fillStyle = '#050505';
             nCtx.fillRect(0, 0, nCanvas.width, nCanvas.height);
             const m = PIECES[nextPieceType];
@@ -2683,9 +2684,55 @@
         }
         // 13. Mobile Burger Menu Toggle
         function toggleMobileMenu() {
-            document.getElementById('mobileNav').classList.toggle('open');
-            document.getElementById('burgerBtn').classList.toggle('open');
+            const mobileNav = document.getElementById('mobileNav');
+            const burgerBtn = document.getElementById('burgerBtn');
+            if (mobileNav) mobileNav.classList.toggle('open');
+            if (burgerBtn) burgerBtn.classList.toggle('open');
         }
-        document.getElementById('burgerBtn')?.addEventListener('click', toggleMobileMenu);
+        function closeMobileMenu() {
+            const mobileNav = document.getElementById('mobileNav');
+            const burgerBtn = document.getElementById('burgerBtn');
+            if (mobileNav) mobileNav.classList.remove('open');
+            if (burgerBtn) burgerBtn.classList.remove('open');
+        }
+        window.toggleMobileMenu = toggleMobileMenu;
+        window.closeMobileMenu = closeMobileMenu;
+
+        const bBtn = document.getElementById('burgerBtn');
+        if (bBtn && !bBtn.dataset.bound) {
+            bBtn.dataset.bound = "true";
+            bBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                toggleMobileMenu();
+            });
+        }
+
+        const mNav = document.getElementById('mobileNav');
+        if (mNav && !mNav.dataset.bound) {
+            mNav.dataset.bound = "true";
+            mNav.querySelectorAll('.mobile-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    closeMobileMenu();
+                });
+            });
+        }
+
+        // Close mobile nav when clicking outside or pressing Escape
+        document.addEventListener('click', (e) => {
+            const mobileNav = document.getElementById('mobileNav');
+            const burgerBtn = document.getElementById('burgerBtn');
+            if (mobileNav && mobileNav.classList.contains('open')) {
+                if (!mobileNav.contains(e.target) && (!burgerBtn || !burgerBtn.contains(e.target))) {
+                    closeMobileMenu();
+                }
+            }
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeMobileMenu();
+            }
+        });
+
 
 
