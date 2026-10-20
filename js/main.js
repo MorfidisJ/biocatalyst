@@ -1482,8 +1482,8 @@
                 title: "iGEM Greece",
                 titleEn: "iGEM Greece Project Showcase",
                 time: "11:25 – 12:00",
-                speaker: "iGEM Ioannina, iGEM UniCrete, iGEM Space Hellas, iGEM Athens",
-                speakerEn: "iGEM Ioannina, iGEM UniCrete, iGEM Space Hellas, iGEM Athens",
+                speaker: "iGEM Ioannina, iGEM Space Hellas, iGEM Athens, iGEM UniCrete",
+                speakerEn: "iGEM Ioannina, iGEM Space Hellas, iGEM Athens, iGEM UniCrete",
                 desc: "Παρουσίαση των φετινών project των ελληνικών ομάδων iGEM.",
                 descEn: "Showcase of synthetic biology and competitive research projects from Greek collegiate iGEM teams.",
                 loc: "📍 MAIN AUDITORIUM"
@@ -1530,32 +1530,32 @@
                 descEn: "A homegrown Ioannina enterprise shares its authentic founding story and scaling journey.",
                 loc: "📍 MAIN AUDITORIUM"
             },
-            "how-to-startup": {
-                title: "How to “Start-Up”",
-                titleEn: "How to Start-Up: Fundamentals",
-                time: "13:30 – 13:50",
-                speaker: "Στελέχη συμβουλευτικών εταιρειών",
-                speakerEn: "Consultancy Executives & Industry Advisors",
-                desc: "Προσκεκλημένοι ομιλητές, ακαδημαϊκοί και επαγγελματίες, δίνουν τα θεμέλια του πώς κατασκευάζεις μια startup.",
-                descEn: "Distinguished academics and seasoned consultants impart core principles on launching a startup.",
-                loc: "📍 MAIN AUDITORIUM"
-            },
             "how-to-bmc": {
                 title: "How to make your BMC",
                 titleEn: "How to make your BMC: Ideation & Competition Kickoff",
-                time: "13:50 – 14:10",
-                speaker: "Μονάδα Καινοτομίας και Επιχειρηματικότητας (ΜΟΚΕ) Πανεπιστημίου Ιωαννίνων (Γιώργος Γκολέτσης, Αναπλ. Καθηγητής Οικονομικών Επιστημών) & στελέχη συμβουλευτικών εταιρειών",
-                speakerEn: "MOKE University of Ioannina (Assoc. Prof. George Gkoletsis) & Consultancy Executives",
-                desc: "Έναρξη καθοδήγησης και διαγωνισμού. Οι ομιλητές καθοδηγούν τους διαγωνιζόμενους στην κατασκευή ενός robust business plan, με βάση όσα έμαθαν.",
-                descEn: "Competition kickoff: hands-on guidance on engineering a robust Business Model Canvas and pitch outline.",
+                time: "13:30 – 13:45",
+                speaker: "Μονάδα Καινοτομίας και Επιχειρηματικότητας (ΜΟΚΕ) Πανεπιστημίου Ιωαννίνων (Γιώργος Γκολέτσης, Αναπλ. Καθηγητής Οικονομικών Επιστημών) & στελέχη εταιρειών",
+                speakerEn: "MOKE University of Ioannina (Assoc. Prof. George Gkoletsis) & Corporate Executives",
+                desc: "Έναρξη καθοδήγησης και διαγωνισμού. Οι ομιλητές καθοδηγούν τους διαγωνιζόμενους στην κατασκευή ενός robust business plan. Έναρξη διαγωνισμού.",
+                descEn: "Competition kickoff: mentors guide participants in formulating a robust Business Model Canvas and pitch foundation.",
                 loc: "📍 WORKSHOP BAY"
+            },
+            "how-to-startup": {
+                title: "How to “Start-Up”",
+                titleEn: "How to Start-Up: Fundamentals & Academic Decision Making",
+                time: "13:45 – 14:20",
+                speaker: "Παναγιώτης Τζαβάρας, Founder of OneThink και κ. Σωτηρία Τριαντάρη, Καθηγήτρια Λήψης Επιχειρηματικών Αποφάσεων, UOWM",
+                speakerEn: "Panagiotis Tzavaras (Founder, OneThink) & Prof. Sotiria Triantari (UOWM)",
+                desc: "Προσκεκλημένοι ομιλητές, ακαδημαϊκοί και επαγγελματίες, δίνουν τα θεμέλια του πώς κατασκευάζεις μια startup. (13:45 - 14:05 παρουσίαση Παναγιώτη & QnA. 14:05 - 14:20 παρουσίαση κ. Τριαντάρη & QnA).",
+                descEn: "Keynote speakers and academic leaders explore startup fundamentals (13:45-14:05 Panagiotis Tzavaras talk & Q&A; 14:05-14:20 Prof. Sotiria Triantari talk & Q&A).",
+                loc: "📍 MAIN AUDITORIUM"
             },
             "lunch-bmc-networking": {
                 title: "Lunch Break | BMC Workshop | Networking",
                 titleEn: "Lunch Break, BMC Workshop & Networking",
-                time: "14:10 – 14:50",
+                time: "14:20 – 14:50",
                 speaker: "ΜΟΚΕ Πανεπιστημίου Ιωαννίνων και στελέχη συμβουλευτικών εταιρειών",
-                speakerEn: "MOKE UoI Mentors & Consultancy Executives",
+                speakerEn: "MOKE University of Ioannina & Advisory Executives",
                 desc: "Παράλληλη δράση του BMC Workshop: κατασκευή BMC και pitch decks για παρουσίαση στους παρευρισκόμενους.",
                 descEn: "Parallel working session building Business Model Canvases and pitch decks alongside networking and catered lunch.",
                 loc: "📍 ATRIUM & LOUNGE"
@@ -1564,113 +1564,113 @@
                 title: "Funding Session",
                 titleEn: "Startup Funding & Venture Banking Session",
                 time: "14:50 – 15:20",
-                speaker: "Ρούλα Μπαχταλιά, Head of Venture Banking, Eurobank",
-                speakerEn: "Roula Bachtalia, Head of Venture Banking, Eurobank",
-                desc: "Καθηγητές και τραπεζικά στελέχη καθοδηγούν τους φοιτητές στο πώς να χρηματοδοτήσουν την ιδέα τους (κυρίως startup).",
-                descEn: "Professors and venture banking leadership mentor students on grant capital, venture funding, and financing tech startups.",
+                speaker: "Ευθύμης Γεωργακόπουλος, EGG Programme Manager, Eurobank",
+                speakerEn: "Efthymis Georgakopoulos, EGG Programme Manager, Eurobank",
+                desc: "Στέλεχος του egg της Eurobank παρουσιάζει το πρόγραμμα και εξηγεί πώς χρηματοδοτείται μια startup στα πρώτα της βήματα: πηγές χρηματοδότησης σε κάθε στάδιο, τι κοιτάζουν οι επενδυτές και πώς παρουσιάζεις την ιδέα σου για να τους πείσεις. Ακολουθούν ερωτήσεις για το venture capital.",
+                descEn: "Eurobank egg Programme Manager presents funding avenues for early-stage startups, investor expectations, pitch mechanics, and venture capital Q&A.",
                 loc: "📍 MAIN AUDITORIUM"
             },
-            "legal-patent": {
-                title: "Νομικό Πλαίσιο | Κατοχύρωση Πατέντας",
-                titleEn: "Legal Framework & Patent Protection",
+            "legal-startups": {
+                title: "Legal for Startups 101",
+                titleEn: "Legal for Startups 101",
                 time: "15:20 – 15:50",
                 speaker: "Θοδωρής Ζέρβας, Ιδρυτής, startuplawyer.gr",
                 speakerEn: "Thodoris Zervas, Founder, startuplawyer.gr",
-                desc: "Consulting session για νομικά και επιχειρηματικά θέματα που αφορούν μια startup.",
-                descEn: "Specialized consulting session tackling intellectual property rights, patent protection, and startup legal architecture.",
+                desc: "Consulting session για τα συχνότερα νομικά θέματα που αφορούν μια startup.",
+                descEn: "Consulting session addressing legal foundations, contracts, intellectual property, and key legal essentials for startups.",
+                loc: "📍 MAIN AUDITORIUM"
+            },
+            "legal-patent": {
+                title: "Legal for Startups 101",
+                titleEn: "Legal for Startups 101",
+                time: "15:20 – 15:50",
+                speaker: "Θοδωρής Ζέρβας, Ιδρυτής, startuplawyer.gr",
+                speakerEn: "Thodoris Zervas, Founder, startuplawyer.gr",
+                desc: "Consulting session για τα συχνότερα νομικά θέματα που αφορούν μια startup.",
+                descEn: "Consulting session addressing legal foundations, contracts, intellectual property, and key legal essentials for startups.",
                 loc: "📍 MAIN AUDITORIUM"
             },
 
-            // Page 3: 15:50 – 17:55
-            "escape-to-industry": {
-                title: "Escape to Industry",
-                titleEn: "Escape to Industry: Career Pathways & Soft Skills",
+            // Page 3: 15:50 – 18:00
+            "bioeconomy-career": {
+                title: "Καριέρα στη Βιοοικονομία",
+                titleEn: "Careers in Bioeconomy",
                 time: "15:50 – 16:15",
-                speaker: "Υπό διαμόρφωση",
-                speakerEn: "Industry Panel / TBA",
-                desc: "Η μετάβαση από τις σπουδές στην αγορά εργασίας αλλά και στα soft skills που χρειάζεται κάποιος. Τόσο στο επιχειρείν όσο και στη καριέρα του. Η ενότητα βρίσκεται υπό διαμόρφωση.",
-                descEn: "Transitioning from university to the job market, essential soft skills, and career pathways in the modern bio-industry.",
-                loc: "📍 MAIN STAGE"
+                speaker: "Ανδρέας Βίτσος, Καθηγητής, Τμήμα Φαρμακευτικής, ΕΚΠΑ",
+                speakerEn: "Prof. Andreas Vitsos, Department of Pharmacy, NKUA",
+                desc: "Πως συνδέουμε τις θετικές επιστήμες (χημεία, φαρμακευτική) με την επιχειρηματικότητα και τη καινοτομία.",
+                descEn: "Bridging natural sciences (chemistry, pharmacy) with entrepreneurship, commercialization, and innovation.",
+                loc: "📍 MAIN AUDITORIUM"
             },
             "coffee-bmc-check": {
                 title: "Coffee Break | Έλεγχος των BMC Projects",
                 titleEn: "Coffee Break & BMC Projects Review",
-                time: "16:15 – 16:30",
+                time: "16:15 – 16:40",
                 speaker: "Οργανωτική επιτροπή & Μέντορες",
                 speakerEn: "Mentors & Organizing Committee",
-                desc: "Διάλειμμα για καφέ και έλεγχος των BMC Projects.",
+                desc: "Διάλειμμα για καφέ και έλεγχος των BMC Projects από τους μέντορες.",
                 descEn: "Coffee break with concurrent mentor review and check-in on contestant BMC projects.",
                 loc: "📍 LOUNGE"
             },
-            "bioeconomy-career": {
-                title: "Καριέρα στη Βιοοικονομία",
-                titleEn: "Careers in Bioeconomy",
-                time: "16:30 – 16:50",
-                speaker: "Βίτσος",
-                speakerEn: "Vitsos",
-                desc: "Ομιλητές και επαγγελματίες εξηγούν πώς κάποιος χτίζει κάτι στον τομέα.",
-                descEn: "In-depth insights from industry experts on navigating careers and venture opportunities within the bioeconomy sector.",
+            "campus-to-career": {
+                title: "From Campus to Career | Soft Skills & Personal Branding",
+                titleEn: "From Campus to Career: Soft Skills & Personal Branding",
+                time: "16:40 – 17:00",
+                speaker: "Ελένη Κουτελίδα, Subject Matter Expert, Talent Acquisition",
+                speakerEn: "Eleni Koutelida, Subject Matter Expert, Talent Acquisition",
+                desc: "Τα soft skills που χρειάζεται κάποιος για να περάσει από τη θεωρία του πανεπιστημίου στην πράξη της εργασίας και για να διαχειριστεί μια startup, καθώς και personal branding: πώς χτίζεις σωστά το προφίλ σου στο LinkedIn και πώς ξεχωρίζεις στη σημερινή αγορά εργασίας.",
+                descEn: "Key soft skills required to transition from university into industry, startup management, personal branding, and optimizing LinkedIn presence.",
                 loc: "📍 MAIN AUDITORIUM"
             },
-            "panathenea": {
-                title: "Panathēnea",
-                titleEn: "Panathēnea Innovation Festival Keynote",
-                time: "16:50 – 17:00",
-                speaker: "Panathēnea",
-                speakerEn: "Panathēnea Innovation Festival",
-                desc: "Εκπρόσωπος του γνωστού ελληνικού φεστιβάλ καινοτομίας μιλάει για την επιχειρηματικότητα στην Ελλάδα και την ανάπτυξη των ελληνικών startups σε ευρωπαϊκό επίπεδο.",
-                descEn: "Representative of the acclaimed Greek Innovation Festival discusses entrepreneurship in Greece and scaling startups across Europe.",
-                loc: "📍 MAIN AUDITORIUM"
-            },
-            "bioepixeirein": {
-                title: "BIOEPIXEIREIN",
-                titleEn: "BIOEPIXEIREIN Master's Program Presentation",
+            "digital-health": {
+                title: "Digital Health",
+                titleEn: "Digital Health & Medical Informatics",
                 time: "17:00 – 17:20",
-                speaker: "Δημήτριος Λεωνίδας, Καθηγητής Βιοχημείας, Πανεπιστήμιο Θεσσαλίας",
-                speakerEn: "Prof. Dimitrios Leonidas, Professor of Biochemistry, University of Thessaly",
-                desc: "Παρουσίαση του μεταπτυχιακού προγράμματος από καθηγητή βιοχημείας.",
-                descEn: "Showcase of the BIOEPIXEIREIN MSc Program by Professor Dimitrios Leonidas, University of Thessaly.",
+                speaker: "Δημήτριος Φωτιάδης, Καθηγητής, Τμήμα Μηχανικών Επιστήμης Υλικών, Διευθυντής του ΔΠΜΣ «Ψηφιακή Ιατρική», Πανεπιστήμιο Ιωαννίνων",
+                speakerEn: "Prof. Dimitrios Fotiadis, Director of MSc Digital Medicine, University of Ioannina",
+                desc: "Η πληροφορική στον χώρο της βιοϋγείας και παρουσίαση του μεταπτυχιακού προγράμματος «Ψηφιακή Ιατρική» του Πανεπιστημίου Ιωαννίνων.",
+                descEn: "Informatics in bio-health and presentation of the Interdepartmental MSc in Digital Medicine at the University of Ioannina.",
+                loc: "📍 MAIN AUDITORIUM"
+            },
+            "ioannina-ecosystem": {
+                title: "Οικοσύστημα Ιωαννίνων: παρόν και μέλλον",
+                titleEn: "Ioannina Ecosystem: Present & Future",
+                time: "17:20 – 17:40",
+                speaker: "κ. Κούτλας, CTO της DropSolid AI, Κοινότητα Ψηφιακών Νομάδων Ιωαννίνων",
+                speakerEn: "Mr. Koutlas, CTO of DropSolid AI, Ioannina Digital Nomads Community",
+                desc: "Προέλευση και δημιουργία της κοινότητας Ψηφιακών Νομάδων. Παρόν και μέλλον του οικοσυστήματος των Ιωαννίνων.",
+                descEn: "Origins and creation of the Digital Nomads community: current landscape and future roadmap for Ioannina's tech ecosystem.",
                 loc: "📍 MAIN AUDITORIUM"
             },
             "research-anchor": {
                 title: "Research Anchor",
-                titleEn: "Research Anchor Showcase",
-                time: "17:20 – 17:55",
-                speaker: "Κατερίνα Τούντα (Falling Walls Lab Athens awardee) & regrape project",
+                titleEn: "Research Anchor: Student Innovation Showcase",
+                time: "17:40 – 18:00",
+                speaker: "Κατερίνα Τούντα, με startup idea βραβευμένη στο Falling Walls Lab Athens, και regrape project",
                 speakerEn: "Katerina Tounta (Falling Walls Lab Athens Awardee) & regrape project",
                 desc: "Ολιγόλεπτες παρουσιάσεις πτυχιακών και ερευνών φοιτητών που αφορούν την αγορά την οποία στοχεύουν οι ίδιοι.",
-                descEn: "Flash presentations of cutting-edge student theses and academic research focused on real-world commercialization.",
+                descEn: "Flash presentations of student theses and research projects targeting real-world market applications.",
                 loc: "📍 MAIN AUDITORIUM"
             },
 
-            // Page 4: 17:55 – 19:00
-            "informatics-biohealth": {
-                title: "Informatics | BioHealth",
-                titleEn: "Informatics & BioHealth — Digital Medicine",
-                time: "17:55 – 18:15",
-                speaker: "Δημήτριος Φωτιάδης, Καθηγητής, Τμήμα Μηχανικών Επιστήμης Υλικών, Διευθυντής του ΔΠΜΣ «Ψηφιακή Ιατρική», Πανεπιστήμιο Ιωαννίνων",
-                speakerEn: "Prof. Dimitrios Fotiadis, Director of MSc Digital Medicine, University of Ioannina",
-                desc: "Η πληροφορική στον χώρο της βιοϋγείας και παρουσίαση του μεταπτυχιακού προγράμματος «Ψηφιακή Ιατρική» του Πανεπιστημίου Ιωαννίνων.",
-                descEn: "Exploration of digital health architectures, medical informatics, and presentation of the MSc in Digital Medicine.",
-                loc: "📍 MAIN AUDITORIUM"
-            },
-            "ioannina-ecosystem": {
-                title: "Οικοσύστημα Ιωαννίνων",
-                titleEn: "Ioannina Innovation Ecosystem & Digital Nomads",
-                time: "18:15 – 18:35",
-                speaker: "κ. Γκούτλας, Κοινότητα Ψηφιακών Νομάδων Ιωαννίνων",
-                speakerEn: "Mr. Gkoutlas, Ioannina Digital Nomads Community",
-                desc: "Προέλευση και δημιουργία της κοινότητας Ψηφιακών Νομάδων. Παρόν και μέλλον του οικοσυστήματος των Ιωαννίνων.",
-                descEn: "Origins and establishment of the Digital Nomads community: current landscape and future roadmap for Ioannina's ecosystem.",
+            // Page 4: 18:00 – 19:00
+            "panathenea": {
+                title: "Panathēnea",
+                titleEn: "Panathēnea: Innovation & European Scale",
+                time: "18:00 – 18:30",
+                speaker: "Ιωάννα Καραχάλιου, Representative of Panathenea και Lars Rasmussen, Co-Founder of Google Maps",
+                speakerEn: "Ioanna Karachaliou (Panathenea) & Lars Rasmussen (Co-Founder of Google Maps)",
+                desc: "Εκπρόσωπος του γνωστού ελληνικού φεστιβάλ καινοτομίας μιλάει για την επιχειρηματικότητα στην Ελλάδα και την ανάπτυξη των ελληνικών startups σε ευρωπαϊκό επίπεδο.",
+                descEn: "Representative of the acclaimed Greek Innovation Festival discusses entrepreneurship in Greece and scaling startups across Europe, joined by Google Maps Co-Founder Lars Rasmussen.",
                 loc: "📍 MAIN AUDITORIUM"
             },
             "closing-awards": {
-                title: "Κλείσιμο | Ευχαριστίες | Networking",
-                titleEn: "Closing Ceremony, Awards & Networking",
-                time: "18:35 – 19:00",
+                title: "Closing Remarks-Networking - Βράβευση καλύτερης BMC ιδέας",
+                titleEn: "Closing Ceremony, Grand Jury BMC Awards & Networking",
+                time: "18:30 – 19:00",
                 speaker: "Οργανωτική επιτροπή",
                 speakerEn: "Organizing Committee & Grand Jury",
-                desc: "Βράβευση της καλύτερης BMC ιδέας και του καλύτερου pitch deck, που επιλέγονται από κριτική επιτροπή αποτελούμενη από τους ομιλητές της ημέρας.",
+                desc: "Βράβευση της καλύτερης BMC ιδέας και του καλύτερου pitch deck, που επιλέγονται από κριτική επιτροπή αποτελούμενη από τους ομιλητές της ημέρας. Κλείσιμο και networking.",
                 descEn: "Awards ceremony for the best BMC and pitch deck selected by the grand jury of the day's speakers, closing remarks, and celebration networking.",
                 loc: "📍 MAIN STAGE & ATRIUM"
             }
@@ -1842,9 +1842,9 @@
                     // ============ SCHEDULE SESSIONS ============
                     const sections = [
                         { name: 'PAGE 1 // 10:30 - 13:10', color: C.purple, keys: ['qr-tickets', 'welcome-joist', 'igem-greece', 'student-startups', 'bio-entrepreneurship-summit', 'round-table'] },
-                        { name: 'PAGE 2 // 13:10 - 15:50', color: C.green, keys: ['local-scaleup', 'how-to-startup', 'how-to-bmc', 'lunch-bmc-networking', 'funding-session', 'legal-patent'] },
-                        { name: 'PAGE 3 // 15:50 - 17:55', color: C.pink, keys: ['escape-to-industry', 'coffee-bmc-check', 'bioeconomy-career', 'panathenea', 'bioepixeirein', 'research-anchor'] },
-                        { name: 'PAGE 4 // 17:55 - 19:00', color: C.blue, keys: ['informatics-biohealth', 'ioannina-ecosystem', 'closing-awards'] }
+                        { name: 'PAGE 2 // 13:10 - 15:50', color: C.green, keys: ['local-scaleup', 'how-to-bmc', 'how-to-startup', 'lunch-bmc-networking', 'funding-session', 'legal-startups'] },
+                        { name: 'PAGE 3 // 15:50 - 18:00', color: C.pink, keys: ['bioeconomy-career', 'coffee-bmc-check', 'campus-to-career', 'digital-health', 'ioannina-ecosystem', 'research-anchor'] },
+                        { name: 'PAGE 4 // 18:00 - 19:00', color: C.blue, keys: ['panathenea', 'closing-awards'] }
                     ];
 
                     let itemCounter = 1;

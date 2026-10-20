@@ -1364,19 +1364,20 @@
             line-height: 1.1;
         }
         .team-grid-clean {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-            gap: 2rem;
-            max-width: 1200px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.5rem;
+            max-width: 1320px;
             margin: 0 auto;
         }
-        @media (max-width: 1024px) {
-            .team-grid-clean { grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 1.5rem; }
-        }
         @media (max-width: 560px) {
-            .team-grid-clean { grid-template-columns: 1fr; }
+            .team-grid-clean { gap: 1.2rem; }
         }
         .team-card-clean {
+            flex: 1 1 200px;
+            max-width: 235px;
+            min-width: 200px;
             border: 4px solid var(--black);
             border-radius: 40px;
             background-color: var(--white);
@@ -1385,8 +1386,11 @@
             flex-direction: column;
             align-items: center;
             text-align: center;
-            padding: 2.5rem 1.5rem;
+            padding: 2.2rem 1.2rem;
             transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        @media (max-width: 560px) {
+            .team-card-clean { max-width: 100%; width: 100%; min-width: 0; }
         }
         .team-card-clean:hover {
             transform: translate(-4px, -4px) rotate(-1deg);

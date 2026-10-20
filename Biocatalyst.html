@@ -93,11 +93,16 @@
             "url": "https://biocatalyst.uoi.gr"
         },
         "performer": [
+            { "@type": "Person", "name": "Lars Rasmussen" },
             { "@type": "Person", "name": "Prof. Dimitrios Fotiadis" },
-            { "@type": "Person", "name": "Roula Bachtalia" },
+            { "@type": "Person", "name": "Efthymis Georgakopoulos" },
             { "@type": "Person", "name": "Thodoris Zervas" },
-            { "@type": "Person", "name": "Prof. Dimitrios Leonidas" },
-            { "@type": "Person", "name": "George Gkoletsis" }
+            { "@type": "Person", "name": "Prof. Andreas Vitsos" },
+            { "@type": "Person", "name": "Eleni Koutelida" },
+            { "@type": "Person", "name": "Panagiotis Tzavaras" },
+            { "@type": "Person", "name": "Prof. Sotiria Triantari" },
+            { "@type": "Person", "name": "George Gkoletsis" },
+            { "@type": "Person", "name": "Ioanna Karachaliou" }
         ],
         "offers": {
             "@type": "Offer",
@@ -340,8 +345,8 @@
         <div class="tabs">
             <button class="tab-btn active hover-trigger" onclick="switchTab('page1', this)">Page 1 <span style="font-size: 0.85rem; display: block; opacity: 0.85;">10:30 – 13:10</span></button>
             <button class="tab-btn hover-trigger" onclick="switchTab('page2', this)">Page 2 <span style="font-size: 0.85rem; display: block; opacity: 0.85;">13:10 – 15:50</span></button>
-            <button class="tab-btn hover-trigger" onclick="switchTab('page3', this)">Page 3 <span style="font-size: 0.85rem; display: block; opacity: 0.85;">15:50 – 17:55</span></button>
-            <button class="tab-btn hover-trigger" onclick="switchTab('page4', this)">Page 4 <span style="font-size: 0.85rem; display: block; opacity: 0.85;">17:55 – 19:00</span></button>
+            <button class="tab-btn hover-trigger" onclick="switchTab('page3', this)">Page 3 <span style="font-size: 0.85rem; display: block; opacity: 0.85;">15:50 – 18:00</span></button>
+            <button class="tab-btn hover-trigger" onclick="switchTab('page4', this)">Page 4 <span style="font-size: 0.85rem; display: block; opacity: 0.85;">18:00 – 19:00</span></button>
             <button class="tab-btn hover-trigger" onclick="switchTab('all', this)" style="background: var(--green); color: var(--white);">Full <span style="font-size: 0.85rem; display: block; opacity: 0.85;">All Sessions</span></button>
             <button class="tab-btn hover-trigger" id="downloadPdfBtn" style="background: var(--yellow);"><span style="font-size: 1.2rem;">⬇</span> PDF</button>
         </div>
@@ -381,7 +386,7 @@
                 <div class="event-info">
                     <h4>iGEM Greece</h4>
                     <p>Παρουσίαση των φετινών project των ελληνικών ομάδων iGEM.</p>
-                    <span class="event-speaker">🎙️ iGEM Ioannina, iGEM UniCrete, iGEM Space Hellas, iGEM Athens</span>
+                    <span class="event-speaker">🎙️ iGEM Ioannina, iGEM Space Hellas, iGEM Athens, iGEM UniCrete</span>
                 </div>
                 <div class="event-tags">
                     <span class="sticker-tag tag-keynote hover-trigger">KEYNOTE</span>
@@ -418,7 +423,7 @@
                 <div class="event-info">
                     <h4>Round Table</h4>
                     <p>Συζήτηση φοιτητικών ομάδων για την οργάνωση δραστηριοτήτων στα Ιωάννινα γύρω από την επιχειρηματικότητα.</p>
-                    <span class="event-speaker">🎙️ Πανελλήνιο Φοιτητικό Συνέδριο Βιοεπιστημών, Ioannina Science Festival, AIESEC, Limbic Brain School</span>
+                    <span class="event-speaker">🎙️ Πανελλήνιο Φοιτητικό Συνέδριο Βιοεπιστημών, Ioannina Science Festival, AIESEC Ioannina, Limbic Structures of the Brain Summer School</span>
                 </div>
                 <div class="event-tags">
                     <span class="sticker-tag tag-social hover-trigger">SOCIAL</span>
@@ -446,25 +451,12 @@
                 </div>
             </div>
 
-            <div class="timeline-row hover-trigger" data-event="how-to-startup" data-tags="keynote,workshop">
-                <div class="time-badge">13:30 – 13:50</div>
-                <div class="event-info">
-                    <h4>How to “Start-Up”</h4>
-                    <p>Προσκεκλημένοι ομιλητές, ακαδημαϊκοί και επαγγελματίες, δίνουν τα θεμέλια του πώς κατασκευάζεις μια startup.</p>
-                    <span class="event-speaker">🎙️ Στελέχη συμβουλευτικών εταιρειών</span>
-                </div>
-                <div class="event-tags">
-                    <span class="sticker-tag tag-keynote hover-trigger">KEYNOTE</span>
-                    <span class="sticker-tag tag-workshop hover-trigger">WORKSHOP</span>
-                </div>
-            </div>
-
             <div class="timeline-row hover-trigger" data-event="how-to-bmc" data-tags="workshop,tech">
-                <div class="time-badge">13:50 – 14:10</div>
+                <div class="time-badge">13:30 – 13:45</div>
                 <div class="event-info">
                     <h4>How to make your BMC</h4>
-                    <p>Έναρξη καθοδήγησης και διαγωνισμού. Οι ομιλητές καθοδηγούν τους διαγωνιζόμενους στην κατασκευή ενός robust business plan, με βάση όσα έμαθαν.</p>
-                    <span class="event-speaker">🎙️ ΜΟΚΕ Παν. Ιωαννίνων (Γιώργος Γκολέτσης) & στελέχη συμβουλευτικών</span>
+                    <p>Έναρξη καθοδήγησης και διαγωνισμού. Οι ομιλητές καθοδηγούν τους διαγωνιζόμενους στην κατασκευή ενός robust business plan. Έναρξη διαγωνισμού.</p>
+                    <span class="event-speaker">🎙️ ΜΟΚΕ Παν. Ιωαννίνων (Γιώργος Γκολέτσης) & στελέχη εταιρειών</span>
                 </div>
                 <div class="event-tags">
                     <span class="sticker-tag tag-workshop hover-trigger">WORKSHOP</span>
@@ -472,12 +464,25 @@
                 </div>
             </div>
 
+            <div class="timeline-row hover-trigger" data-event="how-to-startup" data-tags="keynote,workshop">
+                <div class="time-badge">13:45 – 14:20</div>
+                <div class="event-info">
+                    <h4>How to "Start-Up"</h4>
+                    <p>Προσκεκλημένοι ομιλητές, ακαδημαϊκοί και επαγγελματίες, δίνουν τα θεμέλια του πώς κατασκευάζεις μια startup. (13:45 - 14:05 παρουσίαση Παναγιώτη & QnA. 14:05 - 14:20 παρουσίαση κ. Τριαντάρη & QnA).</p>
+                    <span class="event-speaker">🎙️ Παναγιώτης Τζαβάρας (OneThink), κ. Σωτηρία Τριαντάρη (UOWM)</span>
+                </div>
+                <div class="event-tags">
+                    <span class="sticker-tag tag-keynote hover-trigger">KEYNOTE</span>
+                    <span class="sticker-tag tag-workshop hover-trigger">WORKSHOP</span>
+                </div>
+            </div>
+
             <div class="timeline-row hover-trigger" data-event="lunch-bmc-networking" data-tags="social,workshop">
-                <div class="time-badge">14:10 – 14:50</div>
+                <div class="time-badge">14:20 – 14:50</div>
                 <div class="event-info">
                     <h4>Lunch Break | BMC Workshop | Networking</h4>
                     <p>Παράλληλη δράση του BMC Workshop: κατασκευή BMC και pitch decks για παρουσίαση στους παρευρισκόμενους.</p>
-                    <span class="event-speaker">🎙️ ΜΟΚΕ Πανεπιστημίου Ιωαννίνων & στελέχη συμβουλευτικών</span>
+                    <span class="event-speaker">🎙️ ΜΟΚΕ Πανεπιστημίου Ιωαννίνων & στελέχη συμβουλευτικών εταιρειών</span>
                 </div>
                 <div class="event-tags">
                     <span class="sticker-tag tag-social hover-trigger">SOCIAL</span>
@@ -489,8 +494,8 @@
                 <div class="time-badge">14:50 – 15:20</div>
                 <div class="event-info">
                     <h4>Funding Session</h4>
-                    <p>Καθηγητές και τραπεζικά στελέχη καθοδηγούν τους φοιτητές στο πώς να χρηματοδοτήσουν την ιδέα τους (κυρίως startup).</p>
-                    <span class="event-speaker">🎙️ Ρούλα Μπαχταλιά, Head of Venture Banking, Eurobank</span>
+                    <p>Στέλεχος του egg της Eurobank παρουσιάζει το πρόγραμμα και εξηγεί πώς χρηματοδοτείται μια startup στα πρώτα της βήματα: πηγές χρηματοδότησης σε κάθε στάδιο, τι κοιτάζουν οι επενδυτές και πώς παρουσιάζεις την ιδέα σου για να τους πείσεις. Ακολουθούν ερωτήσεις για το venture capital.</p>
+                    <span class="event-speaker">🎙️ Ευθύμης Γεωργακόπουλος, EGG Programme Manager, Eurobank</span>
                 </div>
                 <div class="event-tags">
                     <span class="sticker-tag tag-workshop hover-trigger">WORKSHOP</span>
@@ -498,11 +503,11 @@
                 </div>
             </div>
 
-            <div class="timeline-row hover-trigger" data-event="legal-patent" data-tags="workshop">
+            <div class="timeline-row hover-trigger" data-event="legal-startups" data-tags="workshop">
                 <div class="time-badge">15:20 – 15:50</div>
                 <div class="event-info">
-                    <h4>Νομικό Πλαίσιο | Κατοχύρωση Πατέντας</h4>
-                    <p>Consulting session για νομικά και επιχειρηματικά θέματα που αφορούν μια startup.</p>
+                    <h4>Legal for Startups 101</h4>
+                    <p>Consulting session για τα συχνότερα νομικά θέματα που αφορούν μια startup.</p>
                     <span class="event-speaker">🎙️ Θοδωρής Ζέρβας, Ιδρυτής, startuplawyer.gr</span>
                 </div>
                 <div class="event-tags">
@@ -514,28 +519,28 @@
         <!-- PAGE 3 PANE -->
         <div id="page3" class="timeline-pane">
             <div style="margin-bottom: 1.5rem; border-bottom: 3px solid var(--black); padding-bottom: 0.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem;">
-                <h3 style="font-size: 1.5rem; text-transform: uppercase; color: var(--pink);">Page 3 // Βιοοικονομία, Industry & Έρευνα</h3>
-                <span style="font-family: monospace; font-weight: bold; background: var(--black); color: var(--yellow); padding: 4px 10px; border-radius: 6px;">15:50 – 17:55</span>
+                <h3 style="font-size: 1.5rem; text-transform: uppercase; color: var(--pink);">Page 3 // Βιοοικονομία, Career & Digital Health</h3>
+                <span style="font-family: monospace; font-weight: bold; background: var(--black); color: var(--yellow); padding: 4px 10px; border-radius: 6px;">15:50 – 18:00</span>
             </div>
 
-            <div class="timeline-row hover-trigger" data-event="escape-to-industry" data-tags="keynote,social">
+            <div class="timeline-row hover-trigger" data-event="bioeconomy-career" data-tags="keynote">
                 <div class="time-badge">15:50 – 16:15</div>
                 <div class="event-info">
-                    <h4>Escape to Industry</h4>
-                    <p>Η μετάβαση από τις σπουδές στην αγορά εργασίας αλλά και στα soft skills που χρειάζεται κάποιος. Τόσο στο επιχειρείν όσο και στη καριέρα του.</p>
-                    <span class="event-speaker">🎙️ Υπό διαμόρφωση</span>
+                    <h4>Καριέρα στη Βιοοικονομία</h4>
+                    <p>Πως συνδέουμε τις θετικές επιστήμες (χημεία, φαρμακευτική) με την επιχειρηματικότητα και τη καινοτομία.</p>
+                    <span class="event-speaker">🎙️ Ανδρέας Βίτσος, Καθηγητής, Τμήμα Φαρμακευτικής, ΕΚΠΑ</span>
                 </div>
                 <div class="event-tags">
                     <span class="sticker-tag tag-keynote hover-trigger">KEYNOTE</span>
-                    <span class="sticker-tag tag-social hover-trigger">SOCIAL</span>
                 </div>
             </div>
 
             <div class="timeline-row hover-trigger" data-event="coffee-bmc-check" data-tags="social,workshop">
-                <div class="time-badge">16:15 – 16:30</div>
+                <div class="time-badge">16:15 – 16:40</div>
                 <div class="event-info">
                     <h4>Coffee Break | Έλεγχος των BMC Projects</h4>
                     <p>Διάλειμμα καφέ και έλεγχος των BMC Projects από τους μέντορες.</p>
+                    <span class="event-speaker">🎙️ Οργανωτική επιτροπή & Μέντορες</span>
                 </div>
                 <div class="event-tags">
                     <span class="sticker-tag tag-social hover-trigger">SOCIAL</span>
@@ -543,45 +548,47 @@
                 </div>
             </div>
 
-            <div class="timeline-row hover-trigger" data-event="bioeconomy-career" data-tags="keynote">
-                <div class="time-badge">16:30 – 16:50</div>
+            <div class="timeline-row hover-trigger" data-event="campus-to-career" data-tags="keynote,social">
+                <div class="time-badge">16:40 – 17:00</div>
                 <div class="event-info">
-                    <h4>Καριέρα στη Βιοοικονομία</h4>
-                    <p>Ομιλητές και επαγγελματίες εξηγούν πώς κάποιος χτίζει κάτι στον τομέα.</p>
-                    <span class="event-speaker">🎙️ Βίτσος</span>
+                    <h4>From Campus to Career | Soft Skills & Personal Branding</h4>
+                    <p>Τα soft skills που χρειάζεται κάποιος για να περάσει από τη θεωρία του πανεπιστημίου στην πράξη της εργασίας και για να διαχειριστεί μια startup, καθώς και personal branding: πώς χτίζεις σωστά το προφίλ σου στο LinkedIn και πώς ξεχωρίζεις στη σημερινή αγορά εργασίας.</p>
+                    <span class="event-speaker">🎙️ Ελένη Κουτελίδα, Subject Matter Expert, Talent Acquisition</span>
                 </div>
                 <div class="event-tags">
                     <span class="sticker-tag tag-keynote hover-trigger">KEYNOTE</span>
+                    <span class="sticker-tag tag-social hover-trigger">SOCIAL</span>
                 </div>
             </div>
 
-            <div class="timeline-row hover-trigger" data-event="panathenea" data-tags="keynote">
-                <div class="time-badge">16:50 – 17:00</div>
-                <div class="event-info">
-                    <h4>Panathēnea</h4>
-                    <p>Εκπρόσωπος του γνωστού ελληνικού φεστιβάλ καινοτομίας μιλάει για την επιχειρηματικότητα στην Ελλάδα και την ανάπτυξη των ελληνικών startups σε ευρωπαϊκό επίπεδο.</p>
-                    <span class="event-speaker">🎙️ Panathēnea</span>
-                </div>
-                <div class="event-tags">
-                    <span class="sticker-tag tag-keynote hover-trigger">KEYNOTE</span>
-                </div>
-            </div>
-
-            <div class="timeline-row hover-trigger" data-event="bioepixeirein" data-tags="keynote,tech">
+            <div class="timeline-row hover-trigger" data-event="digital-health" data-tags="tech,keynote">
                 <div class="time-badge">17:00 – 17:20</div>
                 <div class="event-info">
-                    <h4>BIOEPIXEIREIN</h4>
-                    <p>Παρουσίαση του μεταπτυχιακού προγράμματος από καθηγητή βιοχημείας.</p>
-                    <span class="event-speaker">🎙️ Δημήτριος Λεωνίδας, Καθηγητής Βιοχημείας, Πανεπιστήμιο Θεσσαλίας</span>
+                    <h4>Digital Health</h4>
+                    <p>Η πληροφορική στον χώρο της βιοϋγείας και παρουσίαση του μεταπτυχιακού προγράμματος «Ψηφιακή Ιατρική» του Πανεπιστημίου Ιωαννίνων.</p>
+                    <span class="event-speaker">🎙️ Δημήτριος Φωτιάδης, Καθηγητής, Διευθυντής ΔΠΜΣ «Ψηφιακή Ιατρική», Παν. Ιωαννίνων</span>
+                </div>
+                <div class="event-tags">
+                    <span class="sticker-tag tag-tech hover-trigger">TECH</span>
+                    <span class="sticker-tag tag-keynote hover-trigger">KEYNOTE</span>
+                </div>
+            </div>
+
+            <div class="timeline-row hover-trigger" data-event="ioannina-ecosystem" data-tags="keynote,social">
+                <div class="time-badge">17:20 – 17:40</div>
+                <div class="event-info">
+                    <h4>Οικοσύστημα Ιωαννίνων: παρόν και μέλλον</h4>
+                    <p>Προέλευση και δημιουργία της κοινότητας Ψηφιακών Νομάδων. Παρόν και μέλλον του οικοσυστήματος των Ιωαννίνων.</p>
+                    <span class="event-speaker">🎙️ κ. Κούτλας, CTO της DropSolid AI, Κοινότητα Ψηφιακών Νομάδων Ιωαννίνων</span>
                 </div>
                 <div class="event-tags">
                     <span class="sticker-tag tag-keynote hover-trigger">KEYNOTE</span>
-                    <span class="sticker-tag tag-tech hover-trigger">TECH</span>
+                    <span class="sticker-tag tag-social hover-trigger">SOCIAL</span>
                 </div>
             </div>
 
             <div class="timeline-row hover-trigger" data-event="research-anchor" data-tags="tech,keynote">
-                <div class="time-badge">17:20 – 17:55</div>
+                <div class="time-badge">17:40 – 18:00</div>
                 <div class="event-info">
                     <h4>Research Anchor</h4>
                     <p>Ολιγόλεπτες παρουσιάσεις πτυχιακών και ερευνών φοιτητών που αφορούν την αγορά την οποία στοχεύουν οι ίδιοι.</p>
@@ -597,41 +604,28 @@
         <!-- PAGE 4 PANE -->
         <div id="page4" class="timeline-pane">
             <div style="margin-bottom: 1.5rem; border-bottom: 3px solid var(--black); padding-bottom: 0.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem;">
-                <h3 style="font-size: 1.5rem; text-transform: uppercase; color: var(--blue);">Page 4 // Informatics, Οικοσύστημα & Βραβεύσεις</h3>
-                <span style="font-family: monospace; font-weight: bold; background: var(--black); color: var(--yellow); padding: 4px 10px; border-radius: 6px;">17:55 – 19:00</span>
+                <h3 style="font-size: 1.5rem; text-transform: uppercase; color: var(--blue);">Page 4 // Panathēnea, Lars Rasmussen & Βραβεύσεις</h3>
+                <span style="font-family: monospace; font-weight: bold; background: var(--black); color: var(--yellow); padding: 4px 10px; border-radius: 6px;">18:00 – 19:00</span>
             </div>
 
-            <div class="timeline-row hover-trigger" data-event="informatics-biohealth" data-tags="tech,keynote">
-                <div class="time-badge">17:55 – 18:15</div>
+            <div class="timeline-row hover-trigger" data-event="panathenea" data-tags="keynote,tech">
+                <div class="time-badge">18:00 – 18:30</div>
                 <div class="event-info">
-                    <h4>Informatics | BioHealth</h4>
-                    <p>Η πληροφορική στον χώρο της βιοϋγείας και παρουσίαση του μεταπτυχιακού προγράμματος «Ψηφιακή Ιατρική» του Πανεπιστημίου Ιωαννίνων.</p>
-                    <span class="event-speaker">🎙️ Δημήτριος Φωτιάδης, Καθηγητής, Διευθυντής ΔΠΜΣ «Ψηφιακή Ιατρική», Παν. Ιωαννίνων</span>
+                    <h4>Panathēnea</h4>
+                    <p>Εκπρόσωπος του γνωστού ελληνικού φεστιβάλ καινοτομίας μιλάει για την επιχειρηματικότητα στην Ελλάδα και την ανάπτυξη των ελληνικών startups σε ευρωπαϊκό επίπεδο.</p>
+                    <span class="event-speaker">🎙️ Ιωάννα Καραχάλιου (Panathenea) & Lars Rasmussen (Co-Founder of Google Maps)</span>
                 </div>
                 <div class="event-tags">
+                    <span class="sticker-tag tag-keynote hover-trigger">KEYNOTE</span>
                     <span class="sticker-tag tag-tech hover-trigger">TECH</span>
-                    <span class="sticker-tag tag-keynote hover-trigger">KEYNOTE</span>
-                </div>
-            </div>
-
-            <div class="timeline-row hover-trigger" data-event="ioannina-ecosystem" data-tags="keynote,social">
-                <div class="time-badge">18:15 – 18:35</div>
-                <div class="event-info">
-                    <h4>Οικοσύστημα Ιωαννίνων</h4>
-                    <p>Προέλευση και δημιουργία της κοινότητας Ψηφιακών Νομάδων. Παρόν και μέλλον του οικοσυστήματος των Ιωαννίνων.</p>
-                    <span class="event-speaker">🎙️ κ. Γκούτλας, Κοινότητα Ψηφιακών Νομάδων Ιωαννίνων</span>
-                </div>
-                <div class="event-tags">
-                    <span class="sticker-tag tag-keynote hover-trigger">KEYNOTE</span>
-                    <span class="sticker-tag tag-social hover-trigger">SOCIAL</span>
                 </div>
             </div>
 
             <div class="timeline-row hover-trigger" data-event="closing-awards" data-tags="social,workshop">
-                <div class="time-badge">18:35 – 19:00</div>
+                <div class="time-badge">18:30 – 19:00</div>
                 <div class="event-info">
-                    <h4>Κλείσιμο | Ευχαριστίες | Networking</h4>
-                    <p>Βράβευση της καλύτερης BMC ιδέας και του καλύτερου pitch deck, που επιλέγονται από κριτική επιτροπή αποτελούμενη από τους ομιλητές της ημέρας.</p>
+                    <h4>Closing Remarks & Networking | Βράβευση BMC</h4>
+                    <p>Βράβευση της καλύτερης BMC ιδέας και του καλύτερου pitch deck, που επιλέγονται από κριτική επιτροπή αποτελούμενη από τους ομιλητές της ημέρας. Κλείσιμο και networking.</p>
                     <span class="event-speaker">🎙️ Οργανωτική επιτροπή</span>
                 </div>
                 <div class="event-tags">
