@@ -294,6 +294,29 @@
         body.biohazard .media-sponsor-url {
             color: var(--toxic);
         }
+        body.biohazard .media-sponsor-badge {
+            background-color: var(--toxic);
+            color: var(--black);
+        }
+        body.biohazard .media-sponsor-banner-btn {
+            background-color: #101a12;
+            box-shadow: 8px 8px 0px var(--toxic);
+            border-color: #333;
+        }
+        body.biohazard .media-sponsor-banner-btn:hover {
+            box-shadow: 12px 12px 0px var(--toxic);
+            border-color: var(--toxic);
+        }
+        body.biohazard .media-sponsor-banner-label {
+            color: var(--toxic);
+        }
+        body.biohazard .media-sponsor-banner-url {
+            color: var(--toxic);
+        }
+        body.biohazard .media-sponsor-banner-arrow {
+            background-color: var(--toxic);
+            color: #000;
+        }
 
         body.biohazard .timeline-row { border-bottom-color: #333; }
         body.biohazard .footer-grid { border-bottom-color: #333; }
@@ -905,6 +928,170 @@
             white-space: nowrap;
         }
 
+        /* =========================================
+           MEDIA SPONSOR SHOWCASE BANNER (UNDER SCHEDULE & TEAM)
+           ========================================= */
+        .media-sponsor-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem 1.5rem 0.5rem 1.5rem;
+            margin: 2rem auto 3.5rem auto;
+            max-width: 650px;
+            text-align: center;
+            position: relative;
+            z-index: 5;
+        }
+        .media-sponsor-badge {
+            display: inline-block;
+            font-family: 'Arial', sans-serif;
+            font-weight: 900;
+            font-size: 0.95rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            background-color: var(--pink);
+            color: var(--black);
+            padding: 0.35rem 1.2rem;
+            border: 3px solid var(--black);
+            border-radius: 50px;
+            box-shadow: 4px 4px 0px var(--black);
+            margin-bottom: 1.2rem;
+            transform: rotate(-1.5deg);
+        }
+        .media-sponsor-banner-btn {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            background-color: #16161f;
+            border: 4px solid var(--black);
+            border-radius: 16px;
+            box-shadow: 8px 8px 0px var(--yellow);
+            padding: 1.1rem 1.6rem;
+            gap: 1.5rem;
+            text-decoration: none !important;
+            color: var(--white) !important;
+            transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+            position: relative;
+            overflow: hidden;
+            box-sizing: border-box;
+        }
+        .media-sponsor-banner-btn::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(255, 238, 85, 0.08) 0%, transparent 60%);
+            pointer-events: none;
+        }
+        @media (hover: hover) {
+            .media-sponsor-banner-btn:hover {
+                transform: translate(-4px, -4px) rotate(0.5deg);
+                box-shadow: 12px 12px 0px var(--yellow);
+                border-color: var(--yellow);
+            }
+            .media-sponsor-banner-btn:hover .media-sponsor-banner-logo {
+                transform: scale(1.15);
+                filter: drop-shadow(0 0 16px rgba(255, 197, 146, 0.95));
+            }
+            .media-sponsor-banner-btn:hover .media-sponsor-banner-arrow {
+                background-color: var(--yellow);
+                color: var(--black);
+                transform: rotate(45deg);
+            }
+            .media-sponsor-banner-btn:hover .media-sponsor-banner-url {
+                color: var(--yellow);
+            }
+        }
+        .media-sponsor-banner-logo-wrap {
+            width: 72px;
+            height: 90px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            background: rgba(255, 255, 255, 0.04);
+            border-radius: 10px;
+            padding: 4px;
+        }
+        .media-sponsor-banner-logo {
+            max-width: 100%;
+            max-height: 100%;
+            width: auto;
+            height: 100%;
+            object-fit: contain;
+            filter: drop-shadow(0 4px 8px rgba(255, 197, 146, 0.4));
+            transition: transform 0.2s ease, filter 0.2s ease;
+            display: block;
+        }
+        .media-sponsor-banner-content {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            text-align: left;
+            flex-grow: 1;
+            gap: 3px;
+            min-width: 0;
+        }
+        .media-sponsor-banner-label {
+            font-family: 'Courier New', monospace;
+            font-size: 0.75rem;
+            font-weight: 900;
+            letter-spacing: 1.5px;
+            color: var(--pink);
+            text-transform: uppercase;
+        }
+        .media-sponsor-banner-name {
+            font-family: 'Space Grotesk', 'Arial', sans-serif;
+            font-weight: 900;
+            font-size: clamp(1.8rem, 4vw, 2.4rem);
+            color: var(--white);
+            line-height: 1;
+            letter-spacing: 0.5px;
+        }
+        .media-sponsor-banner-url {
+            font-family: 'Courier New', monospace;
+            font-size: 0.95rem;
+            font-weight: bold;
+            color: var(--green);
+            letter-spacing: 0.5px;
+            transition: color 0.2s ease;
+            margin-top: 4px;
+        }
+        .media-sponsor-banner-arrow {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 3px solid var(--black);
+            background-color: var(--white);
+            color: var(--black);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.6rem;
+            font-weight: 900;
+            flex-shrink: 0;
+            box-shadow: 3px 3px 0px var(--black);
+            transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+        }
+        @media (max-width: 560px) {
+            .media-sponsor-banner-btn {
+                padding: 1rem;
+                gap: 1rem;
+            }
+            .media-sponsor-banner-logo-wrap {
+                width: 56px;
+                height: 72px;
+            }
+            .media-sponsor-banner-name {
+                font-size: 1.6rem;
+            }
+            .media-sponsor-banner-arrow {
+                width: 40px;
+                height: 40px;
+                font-size: 1.2rem;
+            }
+        }
+
         .footer-bottom {
             max-width: 1200px;
             margin: 2rem auto 0 auto;
@@ -1133,6 +1320,29 @@
         }
         body.cyber-red .media-sponsor-url {
             color: #ff073a;
+        }
+        body.cyber-red .media-sponsor-badge {
+            background-color: #ff073a;
+            color: #000;
+        }
+        body.cyber-red .media-sponsor-banner-btn {
+            background-color: #1a0e10;
+            box-shadow: 8px 8px 0px #ff073a;
+            border-color: #333;
+        }
+        body.cyber-red .media-sponsor-banner-btn:hover {
+            box-shadow: 12px 12px 0px #ff073a;
+            border-color: #ff073a;
+        }
+        body.cyber-red .media-sponsor-banner-label {
+            color: #ff073a;
+        }
+        body.cyber-red .media-sponsor-banner-url {
+            color: #ff073a;
+        }
+        body.cyber-red .media-sponsor-banner-arrow {
+            background-color: #ff073a;
+            color: #000;
         }
         body.cyber-red .timeline-row, body.cyber-red .footer-grid { border-bottom-color: #333; }
         body.cyber-red .speaker-img::after { background-image: radial-gradient(#e0e0e0 1px, transparent 1px); }
